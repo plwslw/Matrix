@@ -68,6 +68,10 @@ public class Canvas {
 	return fill(new Pixel(R, G, B));
     }
 
+    public void clear(){
+	fill(255, 255, 255);
+    }
+
     // Bresenham's Line Algorithm - 8 Octants
     public boolean line(int x1, int y1, int x2, int y2) {
 	return line(x1, y1, x2, y2, new Pixel(0, 0, 0));
