@@ -1,0 +1,11 @@
+public class TMatrix extends Matrix{
+
+    public TMatrix(){
+	return identity(4);
+    }
+
+    public TMatrix(TMatrix T){
+	super(T);
+    }
+
+    

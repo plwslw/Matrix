@@ -13,6 +13,10 @@ public class Matrix{
 	A = x;
     }
 
+    public Matrix(Matrix x){
+	A = x.A;
+    }
+
     public int length(){
 	return A[0].length;
     }

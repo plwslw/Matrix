@@ -9,7 +9,11 @@ public class EdgeMatrix extends Matrix{
 
     public EdgeMatrix(double[][] x){
 	super(x);
-    }	
+    }
+
+    public EdgeMatrix(EdgeMatrix E){
+	super();
+    }
     
     public void addEdge(double x1, double x2, double y1, double y2, double z1, double z2){
 	double [] P1={x1, y1, z1, 1};
@@ -18,9 +22,20 @@ public class EdgeMatrix extends Matrix{
 	addColumn(P2);
     }
 
+    public void addEdge(int x1, int x2, int y1, int y2, int z1, int z2){
+	double a1 = (double) x1;
+	double a2 = (double) x2;
+	double b1 = (double) y1;
+	double b2 = (double) y2;
+	double c1 = (double) z1;
+	double c2 = (double) z2;
+	addEdge(a1, a2, b1, b2, c1, c2);
+    }
+
     public static void main(String[] args){
+	/*
 	System.out.println("4x4 Identity:");
-	EdgeMatrix A = identity();
+	Matrix A = identity();
 	System.out.print(A);
 
 	double [][]B1 = {{1,2,3,4},{6,5,3,5},{-1,14,-6,3},{0,9,-3,4}}; //4x4
@@ -39,6 +54,6 @@ public class EdgeMatrix extends Matrix{
 	System.out.println(E);
 	
 	//System.out.println("\nMatrix E:\n");
-
+	*/
     }
 }
